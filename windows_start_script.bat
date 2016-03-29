@@ -1,2 +1,3 @@
-start firefox localhost:9292
-php -S localhost:9292
+SET /A RAND=%RANDOM%
+start firefox localhost:%RAND%
+php -S localhost:%RAND%

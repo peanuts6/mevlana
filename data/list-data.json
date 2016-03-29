@@ -1,0 +1,8 @@
+[
+	{ "id": 0, "name": "Ayşe", "sex": "Kadın", "age": 24 },
+	{ "id": 1, "name": "Mülayim", "sex": "Erkek", "age": 19 },
+	{ "id": 2, "name": "Akif", "sex": "Erkek", "age": 22 },
+	{ "id": 3, "name": "Fatma", "sex": "Kadın", "age": 33 },
+	{ "id": 4, "name": "Recep", "sex": "Erkek", "age": 16 },
+	{ "id": 5, "name": "Mevlüde", "sex": "Kadın", "age": 55 }
+]

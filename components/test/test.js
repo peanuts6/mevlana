@@ -6,12 +6,12 @@ $('.for-example').is(function() {
   var _t = $(this), original = $.trim(_t.html());
 
   $.ajax({
-    url: '/data/listdata.json',
+    url: '/data/list-data.json',
     dataType: 'json',
     beforeSend: function() { _t.html(''); },
     success: function(source) {
       $.each(source, function(key, val) {
-        _t.append(original.replace('{{ val }}', val));
+        _t.append("<li><a href=\"/user/" + val.id + "\">" + val.name + "</a></li>");
       })
     }
   })

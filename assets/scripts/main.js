@@ -3,13 +3,17 @@ var options = {
   'root': '/'
 };
 
-$(window).load(function() {
+function initialStart() {
   var link = getUrl();
 
   if (link == '')
     initRouter();
   else
     initRouter(getUrl());
+}
+
+$(window).load(function() {
+  initialStart()
 })
 
 function initRouter(route = options.default) {
@@ -38,6 +42,18 @@ function initRouter(route = options.default) {
     })
   })
 }
+
+var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
+
+$(window).bind('popstate', function (event) {
+  var initialPop = !popped && location.href == initialURL
+
+  popped = true
+
+  if (initialPop) return;
+
+  initialStart()
+})
 
 function getUrl(sp = '') {
     var all = window.location.href.split('/'),
