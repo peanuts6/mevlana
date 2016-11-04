@@ -11,7 +11,7 @@ $('.for-example').is(function() {
     beforeSend: function() { _t.html(''); },
     success: function(source) {
       $.each(source, function(key, val) {
-        _t.append("<li><a href=\"/user/" + val.id + "\">" + val.name + "</a></li>");
+        _t.append("<li><a class=\"router\" href=\"/user/" + val.id + "\">" + val.name + "</a></li>");
       })
     }
   })
